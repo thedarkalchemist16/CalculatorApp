@@ -62,7 +62,6 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="/"
-        android:onClick="OnDigit"
         android:backgroundTint="@color/Cappucino4"
         android:layout_margin="4dp"
         tools:ignore="OnClick" />
@@ -105,7 +104,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="*"
-            android:onClick="OnDigit"
             android:backgroundTint="@color/Cappucino4"
             android:layout_margin="4dp"
             tools:ignore="OnClick" />
@@ -148,7 +146,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="OnDigit"
             android:backgroundTint="@color/Cappucino4"
             android:layout_margin="4dp"
             tools:ignore="OnClick" />
@@ -179,7 +176,7 @@
             android:layout_marginLeft="10dp"
             android:padding="5dp"
             android:backgroundTint="@color/Cappucino4"
-            android:onClick="OnDigit" />
+             />
 
         <Button
             android:id="@+id/BtnPlus"
@@ -190,7 +187,7 @@
             android:layout_marginLeft="10dp"
             android:padding="10dp"
             android:backgroundTint="@color/Cappucino4"
-            android:onClick="OnDigit" />
+             />
             </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -205,7 +202,7 @@
             android:text="="
             android:textSize="24dp"
             android:backgroundTint="@color/Cappucino4"
-            android:onClick="OnDigit"
+
             />
     </LinearLayout>
 </LinearLayout>
