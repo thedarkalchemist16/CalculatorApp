@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                         one=prefix+one
                     }
 
-                    tvInput?.text=(one.toDouble()-two.toDouble()).toString()
+                    tvInput?.text=RemoveDotAfterZero((one.toDouble()-two.toDouble()).toString())
                 }
 
                 else if(tvValue.startsWith("+")){
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                         one=prefix+one
                     }
 
-                    tvInput?.text=(one.toDouble()+two.toDouble()).toString()
+                    tvInput?.text=RemoveDotAfterZero((one.toDouble()+two.toDouble()).toString())
                 }
 
                 else if (tvValue.startsWith("*")){
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                         one=prefix+one
                     }
 
-                    tvInput?.text=(one.toDouble()*two.toDouble()).toString()
+                    tvInput?.text=RemoveDotAfterZero((one.toDouble()*two.toDouble()).toString())
                 }
 
                 else if (tvValue.startsWith("/")){
@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
                         one=prefix+one
                     }
 
-                    tvInput?.text=(one.toDouble()-two.toDouble()).toString()
+                    tvInput?.text=RemoveDotAfterZero(((one.toDouble()/two.toDouble()).toString()))
                 }
 
 
@@ -139,6 +139,15 @@ class MainActivity : AppCompatActivity() {
 
             }        }
     }
+
+    private fun RemoveDotAfterZero(result: String):String{
+        var value=result
+        if(result.contains(".0")){
+            value=result.substring(0,result.length-2)
+        }
+        return value
+    }
+
 
     private fun IsOperatorAdded (value:String):Boolean{
         return if(value.startsWith("-")){
