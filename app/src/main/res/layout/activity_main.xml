@@ -65,7 +65,7 @@
         android:text="/"
         android:backgroundTint="@color/Cappucino4"
         android:layout_margin="4dp"
-        tools:ignore="OnClick" />
+        tools:ignore="OnOperator" />
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
             android:text="*"
             android:backgroundTint="@color/Cappucino4"
             android:layout_margin="4dp"
-            tools:ignore="OnClick" />
+            tools:ignore="OnOperator" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
             android:text="-"
             android:backgroundTint="@color/Cappucino4"
             android:layout_margin="4dp"
-            tools:ignore="OnClick" />
+            tools:ignore="OnOperator" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -160,11 +160,24 @@
             android:id="@+id/BtnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="0"
             android:textSize="24dp"
             android:backgroundTint="@color/Cappucino4"
             android:onClick="OnDigit"
+            >
+
+        </Button>
+        <Button
+            android:id="@+id/BtnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="."
+            android:textSize="24dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/Cappucino4"
+            android:onClick="OnDecimalPoint"
             >
 
         </Button>
@@ -188,6 +201,7 @@
             android:text="+"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
+            android:onClick="OnOperator"
             android:backgroundTint="@color/Cappucino4"
              />
             </LinearLayout>
@@ -202,6 +216,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="="
+            android:onClick="OnEqual"
             android:textSize="24dp"
             android:backgroundTint="@color/Cappucino4"
 
